@@ -10,7 +10,8 @@ public class GlobalVariables {
     public static double delayCost = 9;
     public static double moneyCost = 7;
     public static double amountCost = 5;
-
+    public static String selectedLanguage = "en_US";
+    
     public static long getClearDelay() {
         return ClearDelay;
     }

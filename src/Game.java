@@ -1,10 +1,8 @@
-import com.malikoreis.jig.currency.*;
 import com.malikoreis.jig.handlers.*;
 
 public class Game {
-
-
     public static void main(String[] args) {
+        LanguageHandler.initialize();
         DataHandler.registerShutdownHook();
         DataHandler.loadData(); // Verileri yükle ve göster
         DataHandler.startAutoSave();

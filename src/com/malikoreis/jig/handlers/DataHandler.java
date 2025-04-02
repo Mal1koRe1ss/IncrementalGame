@@ -54,7 +54,7 @@ public class DataHandler {
 
             Files.write(Paths.get(DATA_DIR + DATA_FILE), json.getBytes());
         } catch (IOException e) {
-            System.err.println("$ Error while saving data: " + e.getMessage());
+            System.err.println(LanguageHandler.translate("data.save.error") + e.getMessage());
         }
     }
 
@@ -87,19 +87,19 @@ public class DataHandler {
 
                 // Yüklenen verileri göster
                 System.out.println("╔══════════════════════════════╗");
-                System.out.printf("║ Loaded Money : %.2f%n", money);
-                System.out.printf("║ Loaded Delay Cost : %.2f%n", delayCost);
-                System.out.printf("║ Loaded Multiply Amount : %.2f%n", multiplyAmount);
+                System.out.printf(LanguageHandler.translate("data.loaded.money"), money);
+                System.out.printf(LanguageHandler.translate("data.loaded.delay"), delayCost);
+                System.out.printf(LanguageHandler.translate("data.loaded.multiplyamount"), multiplyAmount);
 
                 Thread.sleep(GlobalVariables.getClearDelay()); // 2 saniye gösterim
             } else {
-                System.out.println("$ No datas found new game is starting...");
+                System.out.println(LanguageHandler.translate("data.none"));
                 Thread.sleep(1000);
 
                 ConsoleHandler.clearConsole();
             }
         } catch (Exception e) {
-            System.err.println("$ Error while loading data: " + e.getMessage());
+            System.err.println(LanguageHandler.translate("data.load.error") + e.getMessage());
         }
     }
 
@@ -124,7 +124,7 @@ public class DataHandler {
     // Kapanışta kayıt
     public static void registerShutdownHook() {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            System.out.println("$ Exiting... Data is saving.");
+            System.out.println(LanguageHandler.translate("data.save.exit"));
             saveData();
             autoSaveTimer.cancel();
         }));
