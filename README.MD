@@ -34,7 +34,7 @@ $ ~~**Data & Settings saving**~~
 
 $ **More upgrades**
 
-$ **Rebirth**
+$ ~~**Rebirth**~~
 
 $ ~~**2 Languages(English,Turkish)**~~
 
