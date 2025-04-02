@@ -16,7 +16,7 @@ The upcoming updates are in the [TODO](#todo)
 
 Basically you start with a money, in this game it's 1.0.
 
-Every second, you're money get's increased.
+Every second, you'r money get's increased.
 
 And you can buy upgrades to get faster money, more amount of money etc.
 
