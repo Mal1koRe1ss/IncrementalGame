@@ -5,6 +5,7 @@ import java.util.TimerTask;
 
 import com.malikoreis.jig.GlobalVariables;
 import com.malikoreis.jig.currency.Delay;
+import com.malikoreis.jig.currency.Money;
 
 public class MoneyHandler {
 
@@ -43,5 +44,11 @@ public class MoneyHandler {
 
     public static void setMoney(double newMoney) {
         money = newMoney; // MoneyHandler'da money değişkeni olmalı
+    }
+
+        public static void deductMoney(double amount) {
+        if(amount <= 0) return; // Geçersiz miktar
+        double newAmount = Money.getMoney() - amount;
+        setMoney(Math.max(newAmount, 0)); // Negatif olamaz
     }
 }
