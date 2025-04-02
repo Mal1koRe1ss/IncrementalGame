@@ -30,7 +30,7 @@ $ Any Java newer than JDK 17
 
 ## TODO
 
-$ --**Data & Settings saving**--
+$ ~~**Data & Settings saving**~~
 
 $ **More upgrades**
 
