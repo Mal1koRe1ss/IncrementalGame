@@ -36,7 +36,7 @@ $ **More upgrades**
 
 $ **Rebirth**
 
-$ --**2 Languages(English,Turkish)**--
+$ ~~**2 Languages(English,Turkish)**~~
 
 $ **Executable**
 
