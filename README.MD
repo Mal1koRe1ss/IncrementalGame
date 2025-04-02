@@ -10,7 +10,7 @@ It's fun and i'm bored lol.
 
 The game only has a menu for the console.
 
-The updates in the [TODO](#todo)
+The upcoming updates are in the [TODO](#todo)
 
 > What is a incremental game ?
 
