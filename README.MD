@@ -26,7 +26,7 @@ If you found bugs, [Open an issue here](<https://github.com/Mal1koRe1ss/Incremen
 
 ## Requirements (Only in Alpha!)
 
-$ Any Java newer than JDK 17
+$ **Any Java newer than JDK 17** *(Adoptium OpenJDK)*
 
 ## TODO
 
