@@ -1,4 +1,4 @@
-<h1 align="center">Java Incremental Game V0.2</h1>
+<h1 align="center">Java Incremental Game V0.3</h1>
 
 ## Overview
 
