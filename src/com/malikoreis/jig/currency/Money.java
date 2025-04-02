@@ -1,5 +1,6 @@
 package com.malikoreis.jig.currency;
 
+import com.malikoreis.jig.handlers.DelayHandler;
 import com.malikoreis.jig.handlers.MoneyHandler;
 
 public class Money {

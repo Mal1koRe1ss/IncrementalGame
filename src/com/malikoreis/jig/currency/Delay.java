@@ -8,4 +8,8 @@ public class Delay {
         return DelayHandler.time;
     }
 
+    public static double setDelay(double delay) {
+        return DelayHandler.time = delay;
+    }
+
 }

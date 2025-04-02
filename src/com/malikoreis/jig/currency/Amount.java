@@ -1,16 +1,22 @@
 package com.malikoreis.jig.currency;
 
+import com.malikoreis.jig.GlobalVariables;
 
 public class Amount {
 
-    public static double amount = 1.25; // 1000ms = 1s
-
     public static double getAmount() {
-        return amount;
+        return GlobalVariables.moneyAmount;
+    }
+
+    public static double getTimerAmount() {
+        return GlobalVariables.timerAmount;
     }
 
     public static double increaseAmount() {
-        return amount *= 1.15;
+        return GlobalVariables.moneyAmount *= GlobalVariables.increaseAmount;
     }
 
+    public static double setAmount(double amount) {
+        return GlobalVariables.moneyAmount = amount;
+    }
 }
