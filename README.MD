@@ -24,7 +24,7 @@ It's currently in alpha so, you can see bugs.
 
 If you found bugs, [Open an issue here](<https://github.com/Mal1koRe1ss/IncrementalGame/issues>).
 
-## Requirements (Only in Alpha!)
+## Requirements
 
 $ **Any Java newer than JDK 17** *(Adoptium OpenJDK)*
 
