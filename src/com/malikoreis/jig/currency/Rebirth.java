@@ -7,7 +7,10 @@ import com.malikoreis.jig.handlers.DataHandler;
 
 public class Rebirth {
 
+    public static double rebirthAmount = 0;
+
     public static void ResetAll() {
+        rebirthAmount++;
         ResetCurrency();
         ResetVariables();
         changeRebirthCurrency();
@@ -21,10 +24,10 @@ public class Rebirth {
     }
 
     private static void ResetVariables() {
-        GlobalVariables.increaseAmount = 1.75;
-        GlobalVariables.multiplyAmount = 2;
-        GlobalVariables.timerAmount = 0.75;
-        GlobalVariables.moneyAmount = 2;
+        GlobalVariables.increaseAmount = rebirthAmount*1.75;
+        GlobalVariables.multiplyAmount = rebirthAmount*2;
+        GlobalVariables.timerAmount = rebirthAmount*0.75;
+        GlobalVariables.moneyAmount = rebirthAmount*2;
         GlobalVariables.delayCost = 9;
         GlobalVariables.moneyCost = 7;
         GlobalVariables.amountCost = 5;

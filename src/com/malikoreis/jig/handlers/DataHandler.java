@@ -10,6 +10,7 @@ import com.malikoreis.jig.GlobalVariables;
 import com.malikoreis.jig.currency.Amount;
 import com.malikoreis.jig.currency.Delay;
 import com.malikoreis.jig.currency.Money;
+import com.malikoreis.jig.currency.Rebirth;
 
 public class DataHandler {
 
@@ -49,8 +50,9 @@ public class DataHandler {
                     + "\"amountCost\":" + GlobalVariables.amountCost + ","
                     + "\"delay\":" + Delay.getDelay() + ","
                     + "\"amount\":" + Amount.getAmount() + ","
-                    + "\"multiplyAmount\":" + GlobalVariables.multiplyAmount
-                    + "}";
+                    + "\"multiplyAmount\":" + GlobalVariables.multiplyAmount + ","
+                    + "\"rebirthCost\":" + GlobalVariables.rebirthCost + ","
+                    + "\"rebirthAmount\":" + Rebirth.rebirthAmount + "}";
 
             Files.write(Paths.get(DATA_DIR + DATA_FILE), json.getBytes());
         } catch (IOException e) {
@@ -75,6 +77,8 @@ public class DataHandler {
                 int delay = getIntValue(json, "delay");
                 int amount = getIntValue(json, "amount");
                 double multiplyAmount = getDoubleValue(json, "multiplyAmount");
+                double rebirthCost = getDoubleValue(json, "rebirthCost");
+                double rebirthAmount = getDoubleValue(json, "rebirthAmount");
 
                 // Değerleri uygula
                 MoneyHandler.setMoney(money);
@@ -84,12 +88,15 @@ public class DataHandler {
                 Delay.setDelay(delay);
                 Amount.setAmount(amount);
                 GlobalVariables.multiplyAmount = multiplyAmount;
+                GlobalVariables.rebirthCost = rebirthCost;
+                Rebirth.rebirthAmount = rebirthAmount;
 
                 // Yüklenen verileri göster
                 System.out.println("╔══════════════════════════════╗");
                 System.out.printf(LanguageHandler.translate("data.loaded.money"), money);
                 System.out.printf(LanguageHandler.translate("data.loaded.delay"), delayCost);
                 System.out.printf(LanguageHandler.translate("data.loaded.multiplyamount"), multiplyAmount);
+                System.out.printf(LanguageHandler.translate("data.loaded.rebirthamount"), rebirthAmount);
 
                 Thread.sleep(GlobalVariables.getClearDelay()); // 2 saniye gösterim
             } else {

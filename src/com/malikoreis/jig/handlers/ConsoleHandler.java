@@ -14,6 +14,8 @@ import com.malikoreis.jig.currency.Rebirth;
 
 public class ConsoleHandler {
     private static Timer consoleTimer = new Timer();
+    private static volatile boolean isAutoUpdateActive = false;
+    private static Timer updateTimer;
 
     public static void ShowMenu() {
         Scanner sc = new Scanner(System.in);
@@ -180,7 +182,7 @@ public class ConsoleHandler {
     
     private static void waitForConfirmation() {
         try {
-            Thread.sleep(2000); // 2 saniye bekle
+            Thread.sleep(GlobalVariables.getClearDelay()); // 2 saniye bekle
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
