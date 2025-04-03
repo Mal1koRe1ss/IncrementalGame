@@ -38,7 +38,7 @@ $ ~~**Rebirth**~~
 
 $ ~~**2 Languages(English,Turkish)**~~
 
-$ **Executable**
+$ ~~**Executable**~~
 
 $ **Better Console(Live Currency and Menu)**
 
